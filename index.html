@@ -1,0 +1,4 @@
+<!doctype html><meta name="viewport" content="width=device-width,initial-scale=1"><title>Storage test</title><body style="font:20px -apple-system,sans-serif;padding:24px;background:#111;color:#eee"><h2>Storage test</h2><p id=o></p><script>
+var K='st1',n=Date.now(),t='';try{var p=localStorage.getItem(K);t=p?'REMEMBERED: first opened '+Math.round((n-Number(p))/60000)+' min ago':'NOTHING SAVED: first open (saving now)';if(!p)localStorage.setItem(K,String(n));var c=localStorage.getItem(K);if(!c)t+=' | SAVE FAILED'}catch(e){t='BLOCKED: '+e.message}
+document.getElementById('o').textContent=t+' | standalone: '+(navigator.standalone===true)
+</script></body>
